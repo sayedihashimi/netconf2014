@@ -1,0 +1,36 @@
+# Folders to ignore #
+OutputRoot/
+TestResults/
+bin/
+obj/
+_UpgradeReport_Files/
+.svn/
+Backups/
+TestBackup/
+csx/
+packages/
+BuildOutput/
+Backup/
+# CloudServices creates an rcf folder during build
+rcf/
+PublishProfiles/
+
+
+# Known files to ignore always #
+*.suo
+*.user
+*.DotSettings
+~*.docx
+msbuild.log
+msbuild.*.log
+*build.log
+*build.*.log
+.dbshell
+*.private
+UpgradeLog*.xml
+UpgradeLog*.htm
+*.metaproj
+*.metaproj.tmp
+*.sublime-workspace*
+
+##############
