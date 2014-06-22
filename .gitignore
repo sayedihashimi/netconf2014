@@ -13,7 +13,6 @@ BuildOutput/
 Backup/
 # CloudServices creates an rcf folder during build
 rcf/
-PublishProfiles/
 
 
 # Known files to ignore always #
