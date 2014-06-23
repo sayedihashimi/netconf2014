@@ -1,9 +1,6 @@
 ﻿[cmdletbinding()]
 param(
-    #[Parameter(Mandatory=$true)]
     $imgOptPassword,
-
-    #[Parameter(Mandatory=$true)]
     $textMinPassword
 )
 function Get-ScriptDirectory
@@ -31,9 +28,15 @@ $msbuildArgs += ('/p:Password={0}' -f $imgOptPassword)
 "Calling msbuild.exe with the following args: {0}" -f ($msbuildArgs -join ' ') | Write-Output
 
 msbuild $msbuildArgs
-<#
-msbuild .\AzureJobs.SiteExtension.Web.csproj /p:VisualStudioVersion=12.0 
-/p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=imgopt 
-/p:Password=HrbeLx82JewesNmbhsHcKrfuljkeZ6CmiQbiQfk0NYv6kBNevrkR7Bbkv6gx
-#>
 
+$msbuildArgs = @()
+$msbuildArgs += $projToBuild.FullName
+$msbuildArgs += '/p:VisualStudioVersion=12.0'
+$msbuildArgs += '/p:Configuration=Release'
+$msbuildArgs += '/p:DeployOnBuild=true'
+$msbuildArgs += '/p:PublishProfile=textmin'
+$msbuildArgs += ('/p:Password={0}' -f $textMinPassword)
+
+"Calling msbuild.exe with the following args: {0}" -f ($msbuildArgs -join ' ') | Write-Output
+
+msbuild $msbuildArgs
