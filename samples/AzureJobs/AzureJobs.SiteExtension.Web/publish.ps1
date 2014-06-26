@@ -1,7 +1,7 @@
 ﻿[cmdletbinding()]
 param(
-    $imgOptPassword,
-    $textMinPassword
+    $imgOptPassword = $env:imgOptPassword,
+    $textMinPassword = $env:textMinPassword
 )
 function Get-ScriptDirectory
 {
@@ -10,8 +10,12 @@ function Get-ScriptDirectory
 }
 $scriptDir = ((Get-ScriptDirectory) + "\")
 
-if(!$imgOptPassword){ $imgOptPassword = $env:imgOptPassword }
-if(!$textMinPassword){ $textMinPassword = $env:textMinPassword }
+if(!$imgOptPassword){
+    throw 'imgOptPassword is required'
+}
+if(!$textMinPassword){
+    throw 'textMinPassword is required'
+}
 
 $projToBuild = get-item (Join-Path $scriptDir 'AzureJobs.SiteExtension.Web.csproj')
 
