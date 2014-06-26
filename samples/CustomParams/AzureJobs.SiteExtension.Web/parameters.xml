@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters >
+
+  <parameter name="file" description="desciption">
+    <parameterEntry kind="XmlFile"
+                    scope="\\web.config$"
+                    match="/configuration/appSettings/add[@key='file']/@value" />
+  </parameter>
+
+  <parameter name="name" description="desciption">
+    <parameterEntry kind="XmlFile"
+                    scope="\\web.config$"
+                    match="/configuration/appSettings/add[@key='name']/@value" />
+  </parameter>
+
+  <parameter name="color" description="desciption">
+    <parameterEntry kind="XmlFile"
+                    scope="\\web.config$"
+                    match="/configuration/appSettings/add[@key='color']/@value" />
+  </parameter>
+
+</parameters>

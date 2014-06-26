@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AzureJobs.SiteExtension.Web.Site" %>
+
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/WebApplication">
+<head runat="server">
+    <title>Dashboard</title>
+    <link href="css/site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="body" runat="server" />
+</body>
+</html>
