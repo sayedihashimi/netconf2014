@@ -63,6 +63,8 @@
     <Content Include="Site.Master" />
     <Content Include="App_Data\ImageCompressor.Job.exe.csv" />
     <Content Include="App_Data\TextMinifier.Job.exe.csv" />
+    <None Include="Properties\PublishProfiles\imgopt-extrafiles.pubxml" />
+    <None Include="Properties\PublishProfiles\imgopt-optimizeimages.pubxml" />
     <None Include="Properties\PublishProfiles\imgopt.pubxml" />
     <None Include="Properties\PublishProfiles\textmin.pubxml" />
     <None Include="Web.Debug.config">
@@ -70,12 +72,14 @@
     </None>
     <None Include="Web.imgopt.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.textmin.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,1 @@
+All images are licensed with Creative Commons. Images found via https://www.flickr.com/search/?l=commderiv&q=cats
