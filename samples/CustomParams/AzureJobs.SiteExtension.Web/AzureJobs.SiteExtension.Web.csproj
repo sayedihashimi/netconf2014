@@ -73,14 +73,22 @@
     <Content Include="Site.Master" />
     <Content Include="App_Data\ImageCompressor.Job.exe.csv" />
     <Content Include="App_Data\TextMinifier.Job.exe.csv" />
+    <Content Include="_Package\Microsoft.Web.XmlTransform.dll" />
+    <Content Include="_Package\SlowCheetah.Xdt.dll" />
+    <Content Include="_Package\SlowCheetah.Xdt.exe" />
+    <Content Include="packages.config" />
+    <Content Include="AzureJobs.SiteExtension.Web.wpp.targets" />
     <None Include="Properties\PublishProfiles\imgopt.pubxml" />
     <None Include="Properties\PublishProfiles\textmin.pubxml" />
+    <None Include="Properties\PublishProfiles\ToPkg.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="_Package\Sedodream.Package.targets" />
+    <Content Include="_Package\Publish-Interactive.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\site.css" />
@@ -109,6 +117,12 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <includesetaclproviderondestination>false</includesetaclproviderondestination>
+  </PropertyGroup>
+  
+  
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
