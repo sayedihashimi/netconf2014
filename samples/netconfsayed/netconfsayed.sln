@@ -5,6 +5,17 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netconfsayed", "netconfsayed\netconfsayed.csproj", "{41A6315B-CDAE-4A90-B656-8FCCF9CE44BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{1F85A395-815D-4317-BACB-CD0FCDB86D6B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{9C5365D9-133C-48EC-96B5-9BE13E2D989F}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\netconfsayed-WAWS-dev.json = PublishScripts\Configurations\netconfsayed-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C5365D9-133C-48EC-96B5-9BE13E2D989F} = {1F85A395-815D-4317-BACB-CD0FCDB86D6B}
 	EndGlobalSection
 EndGlobal
